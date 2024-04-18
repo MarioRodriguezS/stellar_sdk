@@ -31,11 +31,11 @@ jobs:
             builds.hex.pm:443
 
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: erlef/setup-elixir@904c511e63061a8f501ae4b081ce2c0e9cfc70ab # v1.17.4
+      - uses: erlef/setup-elixir@2f0cc07b4b9bea248ae098aba9e1a8a1de5ec24c # v1.17.5
         with:
           otp-version: ${{ matrix.otp }}
           elixir-version: ${{ matrix.elixir }}
-      - uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
+      - uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
         with:
           path: deps
           key: ${{ runner.os }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
